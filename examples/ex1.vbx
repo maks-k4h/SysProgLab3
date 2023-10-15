@@ -1,0 +1,112 @@
+' Numbers
+
+' decimal
+Dim m As Integer
+m = 0
+m = -12
+m = +0
+m = +0123 ' invalid
+
+' hex
+m = &H012
+m = -&Haf02C3
+
+' float
+Dim f As Float
+f = +12.345
+f = -0.0051
+f = 12.4e0
+f = 314E-2
+f = 12.11.10 ' invalid
+f = 012E-2 ' invalid
+
+
+' Strings
+"some string"
+" some ""cool"" string"
+" not so "cool"" string"
+"
+"another 'invalid VB string'"
+Dim s as String
+a = "hi"
+
+
+' Preprocessor directives
+#ExternalSource( StringLiteral , IntLiteral )
+    [ LogicalLine+ ]
+#End ExternalSource
+
+#Disable Warning BC42356
+    Async Function TestAsync() As Task
+        Console.WriteLine("testing")
+    End Function
+#Enable Warning BC42356
+
+#If expression Then
+   statements
+#ElseIf expression Then
+   [ statements ]
+    ...
+#ElseIf expression Then
+   [ statements ]
+#Else
+   [ statements ]
+#End If
+
+
+' Comments
+Public Class Hello  ' Define the class
+   Public Shared Sub Main(  )   ' Define the method
+      Console.WriteLine("hello, world") 'Do magic
+   End Sub
+End Class   '   "end" the definitions...
+
+
+' Reserved Words
+' just some of them...
+Let
+IsNot ' not just a keyword, but an operator
+Lib
+Like ' not just a keyword, but an operator
+Long
+Loop
+Me
+Mod
+Module
+MustInherit
+MustOverride
+MyBase
+MyClass
+Namespace
+Public
+
+
+' Operators
+m = m
+m >> m
+m / m
+m <> m Xor f = 0.0
+
+
+' Delimiters
+m = 0 _ ' delimiter _ here (line continuation)
+    + 12 + 14 + 8 _
+    - 5 - 2
+
+o1.MyFoo(3.14)
+
+ClientSize = New Size(466, 127)
+
+
+' Identifiers
+Imports System  ' module identifier
+
+Namespace ORelly.ProgVBNet  ' namespace identifier
+
+   Public Class Hello   ' class identifier
+      Public Shared Sub SayHello(  )    ' method identifier
+         Console.WriteLine("hello, world")  ' object & method identifier
+      End Sub
+   End Class
+
+End Namespace

@@ -1,0 +1,3 @@
+/Users/makskonevych/Documents/Cpp/Labs/SysProgLab3/cmake-build-debug/CMakeFiles/SysProgLab3.dir
+/Users/makskonevych/Documents/Cpp/Labs/SysProgLab3/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/makskonevych/Documents/Cpp/Labs/SysProgLab3/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,55 @@
+#Const constname = expression
+#ExternalSource( StringLiteral , IntLiteral )
+    [ LogicalLine+ ]
+#End ExternalSource
+Dim total As Integer = 0
+Dim number As String = txtNumber.Text
+'an array which splits the number variable into characters and stores separately in the array
+Dim numbers As Array = number.ToCharArray
+'loop to repeat five times
+For x = 0 To 4
+    'x is used to see how many digits have been checked
+	'if x is 0 this is the first time through the loop, therefore digit 1 is being checked, 2 is digit 3 and 4 is digit 5.
+    If x = 0 Or x = 2 Or x = 4 Then
+		'the number is retrieved from the variable number by using x to get the
+        'correct digit. As it is a character array, it needs to be converted to a
+        'string and then converted to an integer so calculations can be carried out
+        total = total + CInt(numbers(x).ToString)
+    Else
+        'if it is digit 2 or 4 then it will subtract the number from the total
+        total = total - CInt(numbers(x).ToString)
+    End If
+Next
+'the final total will be displayed in a message box, this is after the loop has finished
+MessageBox.Show("The final total is " & total.ToString)
+
+#Region string_literal
+' 0 or more statements
+#End Region
+
+Dim m As Integer = 0
+
+#If expression Then
+   statements
+#ElseIf expression Then
+   statements
+#ElseIf expression Then
+   statements
+#Else
+   statements
+#End If
+
+' Suppress warning about no awaits in this method.
+#Disable Warning BC42356
+    Async Function TestAsync() As Task
+        Console.WriteLine("testing")
+    End Function
+
+' some comment
+
+#Enable Warning BC42356
+
+Dim total As Integer = _
+    value1 + _
+    value2
+
